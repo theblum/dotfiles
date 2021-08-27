@@ -1,0 +1,102 @@
+HISTFILE="$HOME/.cache/zsh/history"
+HISTSIZE=10000
+SAVEHIST=10000
+KEYTIMEOUT=10
+
+export BROWSER='vieb'
+export EDITOR='nvim'
+export VISUAL='nvim'
+export SUDO_ASKPASS='/usr/lib/ssh/ssh-askpass'
+export SUDO_EDITOR='nvim'
+export LESS=' -Ri '
+export LESSOPEN='|pygmentize -O style=inkpot -g %s'
+export MANPAGER='nvim +Man!'
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+export QT_QPA_PLATFORMTHEME='qgnomeplatform'
+export VMAIL_VIM='nvim'
+export LIBVA_DRIVER_NAME='radeonsi'
+export VDPAU_DRIVER='radeonsi'
+
+setopt autocd
+setopt beep
+setopt extendedglob
+setopt inc_append_history
+setopt nomatch
+setopt notify
+setopt share_history
+
+zstyle :compoinstall filename "$HOME/.zshrc"
+zstyle ':completion:' rehash true
+zstyle ':completion:' menu select
+zstyle ':completion:' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+l:|=* r:|=*'
+autoload -Uz compinit #promptinit
+compinit
+#promptinit
+
+bindkey -v
+bindkey -M viins 'jk' vi-cmd-mode
+
+zmodload zsh/complist
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+
+source /usr/bin/liquidprompt
+
+# `fg` with ctrl-z
+function fancy-ctrl-z {
+    if [[ $#BUFFER -eq 0 ]]; then
+        BUFFER="fg"
+        zle accept-line
+    else
+        zle push-input
+        zle clear-screen
+    fi
+}
+zle -N fancy-ctrl-z
+bindkey '^Z' fancy-ctrl-z
+
+# autosuggestions
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+export ZSH_AUTOSUGGEST_USE_ASYNC=1
+bindkey '^ ' autosuggest-accept
+
+# command-not-found (pkgfile)
+source /usr/share/doc/pkgfile/command-not-found.zsh
+
+# base16-shell
+source $HOME/.config/base16-shell/base16-shell.plugin.zsh
+
+alias l='exa'
+alias ls='exa'
+alias l1='exa -1'
+alias la='exa -a'
+alias ll='exa -l'
+alias lla='exa -la'
+
+alias q='exit'
+
+alias sl='ls'
+alias nivm='nvim'
+alias n='nvim $(fzf)'
+
+alias Psyu='sudo pacman -Syu'
+alias Psyy='sudo pacman -Syy'
+alias Ps='sudo pacman -S'
+alias Prsn='sudo pacman -Rsn'
+alias Pu='sudo pacman -U'
+alias Pss='pacman -Ss'
+alias Psi='pacman -Si'
+alias Pqi='pacman -Qi'
+alias Pql='pacman -Ql'
+alias Pqo='pacman -Qo'
+alias Pqs='pacman -Qs'
+alias Pqm='pacman -Qm'
+alias Pqmq='pacman -Qmq'
+alias Pqdt='pacman -Qdt'
+ 
+alias Yu='yay -Pw && yay -Syu'
+alias Yud='yay -Pw && yay -Syu --devel'
+
+neofetch
