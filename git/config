@@ -1,0 +1,18 @@
+[user]
+	name = Brian Blumberg
+	email = blum@disroot.org
+[core]
+	editor = nvim
+[push]
+	default = simple
+[diff]
+	tool = nvim -d
+[color]
+	ui = auto
+[commit]
+	verbose = true
+[pull]
+	rebase = false
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
