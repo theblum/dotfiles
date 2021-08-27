@@ -1,0 +1,9 @@
+width=15%
+lines=15
+term=foot
+hide_scroll=true
+location=top_left
+gtk_dark=true
+insensitive=true
+key_forward=Control_L-n
+key_backward=Control_L-p
