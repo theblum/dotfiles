@@ -6,7 +6,7 @@ nnoremap <silent> <Leader>ev :edit $MYVIMRC<CR>
 nnoremap <silent> <Leader>ex :edit $HOME/.xinitrc<CR>
 nnoremap <silent> <Leader>eX :edit $HOME/.Xresources<CR>
 nnoremap <silent> <Leader>ea :edit $HOME/.config/alacritty/alacritty.yml<CR>
-nnoremap <silent> <Leader>ei :edit $HOME/.config/i3/config<CR>
+nnoremap <silent> <Leader>es :edit $HOME/.config/sway/config<CR>
 nnoremap <silent> <Leader>ez :edit $HOME/.zshrc<CR>
 
 " save current file
