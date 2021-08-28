@@ -12,10 +12,13 @@ export LESS=' -Ri '
 export LESSOPEN='|pygmentize -O style=inkpot -g %s'
 export MANPAGER='nvim +Man!'
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+export QT_QPA_PLATFORM='wayland'
 export QT_QPA_PLATFORMTHEME='qgnomeplatform'
 export VMAIL_VIM='nvim'
 export LIBVA_DRIVER_NAME='radeonsi'
 export VDPAU_DRIVER='radeonsi'
+export XDG_CURRENT_DESKTOP='sway'
+export XDG_SESSION_TYPE='wayland'
 
 setopt autocd
 setopt beep
