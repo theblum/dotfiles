@@ -25,10 +25,10 @@ setopt nomatch
 setopt notify
 setopt share_history
 
-zstyle :compoinstall filename "$HOME/.zshrc"
-zstyle ':completion:' rehash true
-zstyle ':completion:' menu select
-zstyle ':completion:' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+l:|=* r:|=*'
+zstyle :compinstall filename "$HOME/.zshrc"
+zstyle ':completion:*' rehash true
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+l:|=* r:|=*'
 autoload -Uz compinit #promptinit
 compinit
 #promptinit
