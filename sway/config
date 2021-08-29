@@ -1,0 +1,202 @@
+## sway config ##
+
+set $mod Mod4
+floating_modifier $mod normal
+
+bindsym $mod+Shift+c reload
+
+set $mode_system System (l) lock, (e) logout, (r) reboot, (s) shutdown
+mode "$mode_system" {
+    bindsym l exec swaylock -f -c 000000, mode "default"
+    bindsym e exec swaymsg exit, mode "default"
+    bindsym r exec systemctl reboot, mode "default"
+    bindsym s exec systemctl poweroff, mode "default"
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+Pause mode "default"
+}
+bindsym $mod+Pause mode "$mode_system"
+
+exec swayidle -w \
+    timeout 600 'swaylock -f -c 000000' \
+    timeout 10 'if pgrep -x swaylock >/dev/null; then swaymsg "output * dpms off"; fi' \
+    resume 'swaymsg "output * dpms on"'
+
+## Theme ##
+
+include /home/blum/vcs/base16-sway/themes/base16-material.config
+#                       Border  BG      Text    Ind     Child Border
+client.focused          $base05 $base0D $base00 $base0D $base0D
+client.focused_inactive $base01 $base01 $base05 $base03 $base01
+client.unfocused        $base01 $base00 $base05 $base01 $base01
+client.urgent           $base08 $base08 $base00 $base08 $base08
+client.placeholder      $base00 $base00 $base05 $base00 $base00
+client.background       $base07
+
+font pango:Cousine Nerd Font 9
+
+output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+input type:keyboard xkb_options "ctrl:nocaps"
+
+gaps inner 20
+gaps horizontal 20
+
+default_border pixel 1
+default_floating_border pixel 1
+
+focus_on_window_activation urgent
+focus_follows_mouse yes
+mouse_warping none
+
+## Bindings ##
+
+set $left h
+set $down j
+set $up k
+set $right l
+
+set $term foot
+
+bindsym $mod+Return exec $term tmux
+bindsym $mod+Shift+Return exec $term
+bindsym $mod+p exec wofi --show run,drun
+bindsym $mod+r exec $term --app-id ranger zsh -i -c "tmux new-session -A -s ranger ranger"
+
+bindsym $mod+q kill
+bindsym --whole-window $mod+button2 kill
+
+bindsym $mod+$left  focus left
+bindsym $mod+$down  focus down
+bindsym $mod+$up    focus up
+bindsym $mod+$right focus right
+
+bindsym $mod+Shift+$left  move left
+bindsym $mod+Shift+$down  move down
+bindsym $mod+Shift+$up    move up
+bindsym $mod+Shift+$right move right
+
+bindsym $mod+u [urgent=latest] focus
+bindsym $mod+Tab workspace back_and_forth
+
+bindsym $mod+Control+$left  resize grow left  10px
+bindsym $mod+Control+$down  resize grow down  10px
+bindsym $mod+Control+$up    resize grow up    10px
+bindsym $mod+Control+$right resize grow right 10px
+
+bindsym $mod+Shift+Control+$left  resize shrink left  10px
+bindsym $mod+Shift+Control+$down  resize shrink down  10px
+bindsym $mod+Shift+Control+$up    resize shrink up    10px
+bindsym $mod+Shift+Control+$right resize shrink right 10px
+
+bindsym $mod+c move position center
+
+bindsym $mod+bracketleft  splitv
+bindsym $mod+bracketright splith
+
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+bindsym $mod+f fullscreen
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+
+bindsym $mod+a focus parent
+bindsym $mod+d focus child
+
+bindsym $mod+m mark marked
+bindsym $mod+Shift+m unmark marked
+bindsym $mod+n swap mark marked
+
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
+bindsym $mod+Left               exec playerctl previous
+bindsym $mod+Right              exec playerctl next
+bindsym $mod+KP_Enter           exec playerctl play-pause
+bindsym $mod+Up                 exec pulseaudio-ctl up   5
+bindsym $mod+Down               exec pulseaudio-ctl down 5
+bindsym $mod+Shift+KP_Enter     exec pulseaudio-ctl mute
+
+## Workspaces ##
+
+set $screen_primary   HDMI-A-1
+set $screen_secondary DP-1
+
+set $ws1  "1"
+set $ws2  "2"
+set $ws3  "3"
+set $ws4  "4"
+set $ws5  "5"
+set $ws6  "6"
+set $ws7  "7"
+set $ws8  "8"
+set $ws9  "9"
+set $ws10 "10"
+
+workspace $ws1 output $screen_primary
+workspace $ws2 output $screen_secondary
+workspace $ws3 output $screen_primary
+workspace $ws4 output $screen_secondary
+workspace $ws5 output $screen_primary
+workspace $ws6 output $screen_secondary
+workspace $ws7 output $screen_primary
+workspace $ws8 output $screen_secondary
+
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+## Windows ##
+
+for_window [app_id="ranger"]        floating enable
+
+
+#
+# Status Bar:
+#
+# Read `man 5 sway-bar` for more information about this section.
+bar {
+    position top
+
+    # When the status_command prints a new line to stdout, swaybar updates.
+    # The default just shows the current date and time.
+    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+
+    colors {
+        background $base00
+        separator  $base01
+        statusline $base04
+
+        #                   Border  BG      Text
+        focused_workspace   $base05 $base0D $base00
+        active_workspace    $base05 $base03 $base00
+        inactive_workspace  $base03 $base01 $base05
+        urgent_workspace    $base08 $base08 $base00
+        binding_mode        $base00 $base0A $base00
+    }
+}
+
+exec /usr/share/sway-git/scripts/inactive-windows-transparency.py --opacity 0.9
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
+include /etc/sway/config.d/*
