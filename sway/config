@@ -1,4 +1,6 @@
-## sway config ##
+### sway config ###
+
+## System ##
 
 set $mod Mod4
 floating_modifier $mod normal
@@ -20,7 +22,7 @@ bindsym $mod+Pause mode "$mode_system"
 
 exec swayidle -w \
     timeout 600 'swaylock -f -c 000000' \
-    timeout 10 'if pgrep -x swaylock >/dev/null; then swaymsg "output * dpms off"; fi' \
+    timeout 10 'if pgrep swaylock >/dev/null; then swaymsg "output * dpms off"; fi' \
     resume 'swaymsg "output * dpms on"'
 
 ## Theme ##
@@ -36,11 +38,11 @@ client.background       $base07
 
 font pango:Cousine Nerd Font 9
 
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg /home/blum/pix/blue-forest.jpg fill
 input type:keyboard xkb_options "ctrl:nocaps"
 
 gaps inner 20
-gaps horizontal 20
+gaps horizontal 50
 
 default_border pixel 1
 default_floating_border pixel 1
@@ -170,30 +172,10 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 for_window [app_id="ranger"]        floating enable
 
+## Status Bar ##
 
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
 bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
-
-    colors {
-        background $base00
-        separator  $base01
-        statusline $base04
-
-        #                   Border  BG      Text
-        focused_workspace   $base05 $base0D $base00
-        active_workspace    $base05 $base03 $base00
-        inactive_workspace  $base03 $base01 $base05
-        urgent_workspace    $base08 $base08 $base00
-        binding_mode        $base00 $base0A $base00
-    }
+    swaybar_command waybar
 }
 
 exec /usr/share/sway-git/scripts/inactive-windows-transparency.py --opacity 0.9
