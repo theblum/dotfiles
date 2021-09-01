@@ -1,0 +1,10 @@
+@import '/home/blum/vcs/base16-waybar/colors/base16-material.css';
+* {
+    border: none;
+    border-radius: 5;
+    background-color: @base00;
+    opacity: 0.90;
+    font-family: Cousine Nerd Font;
+    font-size: 10pt;
+    padding: 0 2;
+}

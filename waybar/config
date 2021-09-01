@@ -1,0 +1,32 @@
+{
+    "layer": "top",
+    "position": "top",
+    "margin": 5,
+
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["pulseaudio", "clock", "tray"],
+
+    "sway/window": {
+        "max-length": 50
+    },
+
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-icons": {
+            "default": ["奄", "奔", "墳"]
+        },
+        "format-muted": "mute ﱝ",
+        "on-click": "pulseaudio-ctl mute",
+        "scroll-step": 5.0
+    },
+
+    "clock": {
+        "format": "{:%a, %d. %b  %H:%M}"
+    },
+
+    "tray": {
+        "icon-size": 20,
+        "spacing": 5
+    }
+}
