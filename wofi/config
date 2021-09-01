@@ -1,5 +1,6 @@
 width=15%
 height=50%
+xoffset=5
 term=foot
 hide_scroll=true
 location=top_left
