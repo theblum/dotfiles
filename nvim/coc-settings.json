@@ -1,5 +1,11 @@
 {
     "coc.preferences.extensionUpdateCheck": "daily",
     "python.linting.flake8Enabled": true,
-    "zig.path": "zls"
+
+    "languageserver": {
+        "zig": {
+            "command": "zls",
+            "filetypes": ["zig"]
+        }
+    }
 }
