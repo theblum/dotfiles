@@ -25,6 +25,13 @@
     background-color: @base0D;
 }
 
+#mode {
+    background-color: @base0B;
+    color: @base00;
+    padding: 0 5;
+    margin: 0 5;
+}
+
 #pulseaudio {
     padding: 0 5;
 }

@@ -7,8 +7,8 @@ floating_modifier $mod normal
 
 bindsym $mod+Shift+c reload
 
-set $mode_system System (l) lock, (e) logout, (r) reboot, (s) shutdown
-mode "$mode_system" {
+set $mode_system System:  <u>l</u>ock,  <u>e</u>xit, ﰇ <u>r</u>eboot, 襤 <u>s</u>hutdown
+mode --pango_markup "$mode_system" {
     bindsym l exec swaylock -f -c 000000, mode "default"
     bindsym e exec swaymsg exit, mode "default"
     bindsym r exec systemctl reboot, mode "default"
