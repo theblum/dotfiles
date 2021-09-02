@@ -41,3 +41,7 @@
     color: @base00;
     padding: 0 5;
 }
+
+#tray {
+    padding: 0 2;
+}
