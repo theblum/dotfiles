@@ -21,7 +21,6 @@ mode --pango_markup "$mode_system" {
 bindsym $mod+Pause mode "$mode_system"
 
 exec swayidle -w \
-    timeout 600 'swaylock -f -c 000000' \
     timeout 10 'if pgrep swaylock >/dev/null; then swaymsg "output * dpms off"; fi' \
     resume 'swaymsg "output * dpms on"'
 
