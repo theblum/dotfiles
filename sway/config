@@ -61,7 +61,7 @@ set $term foot
 
 bindsym $mod+Return exec $term tmux
 bindsym $mod+Shift+Return exec $term
-bindsym $mod+p exec wofi --show run,drun
+bindsym $mod+p exec wofi --show 'run,drun' --prompt run
 bindsym $mod+r exec $term --app-id ranger zsh -i -c "tmux new-session -A -s ranger ranger"
 
 bindsym $mod+q kill
@@ -170,6 +170,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 ## Windows ##
 
 for_window [app_id="ranger"]        floating enable
+for_window [title=".*_debug"]       floating enable
 
 ## Status Bar ##
 
@@ -178,6 +179,6 @@ bar {
 }
 
 exec /usr/share/sway-git/scripts/inactive-windows-transparency.py --opacity 0.9
-exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+#exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
 include /etc/sway/config.d/*
