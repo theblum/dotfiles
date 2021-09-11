@@ -13,7 +13,7 @@
 }
 
 #workspaces {
-    background-color: @base0C;
+    background-color: @base0D;
 }
 
 #workspaces button {
@@ -22,7 +22,7 @@
 }
 
 #workspaces button.focused {
-    background-color: @base0D;
+    background-color: @base0C;
 }
 
 #mode {
