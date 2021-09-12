@@ -32,6 +32,24 @@
     margin: 0 2px;
 }
 
+@keyframes blink {
+    to {
+        color: @base08;
+    }
+}
+
+#temperature {
+    padding: 0 5px;
+}
+
+#temperature.critical {
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
 #pulseaudio {
     padding: 0 5px;
 }

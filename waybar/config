@@ -5,10 +5,18 @@
 
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["pulseaudio", "clock", "tray"],
+    "modules-right": ["temperature", "pulseaudio", "clock", "tray"],
 
     "sway/window": {
         "max-length": 50
+    },
+
+    "temperature": {
+        "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+        "critical-threshold": 80,
+        "interval": 5,
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["","", "", "", ""]
     },
 
     "pulseaudio": {
