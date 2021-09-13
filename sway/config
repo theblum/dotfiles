@@ -167,6 +167,20 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
+set $mode_wacom Wacom Output (p|1) primary, (s|2) secondary
+mode "$mode_wacom" {
+    bindsym p input type:tablet_tool map_to_output $screen_primary, mode "default"
+    bindsym 1 input type:tablet_tool map_to_output $screen_primary, mode "default"
+
+    bindsym s input type:tablet_tool map_to_output $screen_secondary, mode "default"
+    bindsym 2 input type:tablet_tool map_to_output $screen_secondary, mode "default"
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+Shift+w mode "default"
+}
+bindsym $mod+Shift+w mode "$mode_wacom"
+
 ## Windows ##
 
 for_window [app_id="ranger"]        floating enable
