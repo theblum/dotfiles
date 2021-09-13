@@ -7,7 +7,7 @@ floating_modifier $mod normal
 
 bindsym $mod+Shift+c reload
 
-set $mode_system System:  <u>l</u>ock,  <u>e</u>xit, ﰇ <u>r</u>eboot, 襤 <u>s</u>hutdown
+set $mode_system System:  <u><b>l</b></u>ock,  <u><b>e</b></u>xit, ﰇ <u><b>r</b></u>eboot, 襤 <u><b>s</b></u>hutdown
 mode --pango_markup "$mode_system" {
     bindsym l exec swaylock -f -c 000000, mode "default"
     bindsym e exec swaymsg exit, mode "default"
@@ -167,8 +167,8 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-set $mode_wacom Wacom Output (p|1) primary, (s|2) secondary
-mode "$mode_wacom" {
+set $mode_wacom Wacom Output:  <u><b>p</b></u>rimary,  <u><b>s</b></u>econdary
+mode --pango_markup "$mode_wacom" {
     bindsym p input type:tablet_tool map_to_output $screen_primary, mode "default"
     bindsym 1 input type:tablet_tool map_to_output $screen_primary, mode "default"
 
