@@ -15,22 +15,22 @@
         "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
         "critical-threshold": 80,
         "interval": 5,
-        "format": "{temperatureC}°C {icon}",
+        "format": "{icon} {temperatureC}°C",
         "format-icons": ["","", "", "", ""]
     },
 
     "pulseaudio": {
-        "format": "{volume}% {icon}",
+        "format": "{icon} {volume}%",
         "format-icons": {
             "default": ["奄", "奔", "墳"]
         },
-        "format-muted": "mute ﱝ",
+        "format-muted": "婢 mute",
         "on-click": "pulseaudio-ctl mute",
         "scroll-step": 5.0
     },
 
     "clock": {
-        "format": "{:%Y-%m-%d %I:%M %p}"
+        "format": "{: %Y-%m-%d  %I:%M %p}"
     },
 
     "tray": {
