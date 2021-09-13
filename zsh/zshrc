@@ -103,5 +103,6 @@ alias Yu='yay -Pw && yay -Syu'
 alias Yud='yay -Pw && yay -Syu --devel'
 alias Ys='yay -S'
 alias Yss='yay -Ss'
+alias Ysi='yay -Si'
 
 neofetch
