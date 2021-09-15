@@ -113,9 +113,9 @@ bindsym $mod+n swap mark marked
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
-bindsym $mod+Left               exec playerctl previous
-bindsym $mod+Right              exec playerctl next
-bindsym $mod+KP_Enter           exec 'if [[ $(playerctl status) == "Paused" ]]; then playerctl play; else playerctl pause; fi'
+bindsym $mod+Left               exec spt playback --previous
+bindsym $mod+Right              exec spt playback --next
+bindsym $mod+KP_Enter           exec spt playback --toggle
 bindsym $mod+Up                 exec pulseaudio-ctl up   5
 bindsym $mod+Down               exec pulseaudio-ctl down 5
 bindsym $mod+Shift+KP_Enter     exec pulseaudio-ctl mute
