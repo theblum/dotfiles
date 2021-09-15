@@ -115,7 +115,7 @@ bindsym $mod+minus scratchpad show
 
 bindsym $mod+Left               exec playerctl previous
 bindsym $mod+Right              exec playerctl next
-bindsym $mod+KP_Enter           exec playerctl play-pause
+bindsym $mod+KP_Enter           exec 'if [[ $(playerctl status) == "Paused" ]]; then playerctl play; else playerctl pause; fi'
 bindsym $mod+Up                 exec pulseaudio-ctl up   5
 bindsym $mod+Down               exec pulseaudio-ctl down 5
 bindsym $mod+Shift+KP_Enter     exec pulseaudio-ctl mute
