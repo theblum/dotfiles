@@ -17,8 +17,8 @@ export QT_QPA_PLATFORMTHEME='qgnomeplatform'
 export VMAIL_VIM='nvim'
 export LIBVA_DRIVER_NAME='radeonsi'
 export VDPAU_DRIVER='radeonsi'
-export XDG_CURRENT_DESKTOP='sway'
-export XDG_SESSION_TYPE='wayland'
+# export XDG_CURRENT_DESKTOP='sway'
+# export XDG_SESSION_TYPE='wayland'
 
 setopt autocd
 setopt beep
