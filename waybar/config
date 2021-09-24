@@ -5,18 +5,28 @@
 
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["temperature", "pulseaudio", "clock", "tray"],
+    "modules-right": ["temperature#cpu", "temperature#gpu", "pulseaudio", "clock", "tray"],
 
     "sway/window": {
         "max-length": 50
     },
 
-    "temperature": {
-        "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+    "temperature#cpu": {
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp2_input",
         "critical-threshold": 80,
         "interval": 5,
         "format": "{icon} {temperatureC}°C",
-        "format-icons": ["","", "", "", ""]
+        "format-icons": ["","", "", "", ""],
+        "tooltip-format": "cpu"
+    },
+
+    "temperature#gpu": {
+        "hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
+        "critical-threshold": 80,
+        "interval": 5,
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["","", "", "", ""],
+        "tooltip-format": "gpu"
     },
 
     "pulseaudio": {
