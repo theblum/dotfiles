@@ -194,7 +194,7 @@ bar {
     swaybar_command waybar
 }
 
-exec /usr/share/sway-git/scripts/inactive-windows-transparency.py --opacity 0.9
+exec /usr/share/sway/scripts/inactive-windows-transparency.py --opacity 0.9
 exec /usr/lib/xfce-polkit/xfce-polkit
 #exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
