@@ -5,10 +5,15 @@
 
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["temperature#cpu", "temperature#gpu", "pulseaudio", "clock", "tray"],
+    "modules-right": ["custom/weather", "temperature#cpu", "temperature#gpu", "pulseaudio", "clock", "tray"],
 
     "sway/window": {
         "max-length": 50
+    },
+
+    "custom/weather": {
+        "exec": "curl 'https://wttr.in/?format=1' | sed 's/  +/ /'",
+        "interval": 1800
     },
 
     "temperature#cpu": {
