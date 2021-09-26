@@ -12,12 +12,12 @@
     },
 
     "temperature#cpu": {
-        "hwmon-path": "/sys/class/hwmon/hwmon2/temp2_input",
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp7_input",
         "critical-threshold": 80,
         "interval": 5,
         "format": "{icon} {temperatureC}°C",
         "format-icons": ["","", "", "", ""],
-        "tooltip-format": "cpu"
+        "tooltip-format": "cpu peci"
     },
 
     "temperature#gpu": {
