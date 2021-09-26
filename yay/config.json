@@ -11,7 +11,7 @@
 	"rebuild": "no",
 	"answerclean": "",
 	"answerdiff": "",
-	"answeredit": "NotInstalled",
+	"answeredit": "",
 	"answerupgrade": "",
 	"gitbin": "git",
 	"gpgbin": "gpg",
