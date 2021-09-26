@@ -184,6 +184,7 @@ bindsym $mod+Shift+w mode "$mode_wacom"
 ## Windows ##
 
 for_window [app_id="ranger"]        floating enable
+for_window [app_id="imv"]           floating enable
 for_window [title=".*_debug"]       floating enable
 for_window [class="discord"]        floating enable
 for_window [app_id="xfce-polkit"]   floating enable
@@ -194,7 +195,7 @@ bar {
     swaybar_command waybar
 }
 
-exec /usr/share/sway/scripts/inactive-windows-transparency.py --opacity 0.9
+exec /usr/share/sway-git/scripts/inactive-windows-transparency.py --opacity 0.9
 exec /usr/lib/xfce-polkit/xfce-polkit
 #exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
