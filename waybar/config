@@ -12,12 +12,14 @@
     },
 
     "custom/weather": {
-        "exec": "curl 'https://wttr.in/?format=1' | sed 's/  +/ /'",
+        "exec": "curl 'https://wttr.in/fat?format=1' | sed 's/. +/ /'",
+        "on-click": "pkill -SIGRTMIN+8 waybar",
+        "signal": 8,
         "interval": 1800
     },
 
     "temperature#cpu": {
-        "hwmon-path": "/sys/class/hwmon/hwmon2/temp7_input",
+        "hwmon-path": "/sys/class/hwmon/hwmon1/temp7_input",
         "critical-threshold": 80,
         "interval": 5,
         "format": "{icon} {temperatureC}°C",
