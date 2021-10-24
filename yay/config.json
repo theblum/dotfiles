@@ -1,7 +1,7 @@
 {
 	"aururl": "https://aur.archlinux.org",
 	"buildDir": "/home/blum/.cache/yay",
-	"editor": "emacsclient",
+	"editor": "nvim",
 	"editorflags": "--create-frame --alternate-editor=emacs",
 	"makepkgbin": "makepkg",
 	"makepkgconf": "",
