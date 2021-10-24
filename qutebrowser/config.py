@@ -9,11 +9,13 @@ c.editor.command = [ 'foot', 'zsh', '-i', '-c', 'nvim {file} +{line}' ]
 c.messages.timeout = 5000
 c.session.lazy_restore = True
 c.tabs.background = True
+c.scrolling.smooth = True
 c.spellcheck.languages = [ 'en-US' ]
 
 c.url.searchengines = {
     'aw': 'https://wiki.archlinux.org/index.php?search={}',
     'aa': 'https://aur.archlinux.org/packages/?K={}',
+    'ap': 'https://archlinux.org/packages/?q={}',
     'dd': 'https://duckduckgo.com/?q={}',
     'gg': 'https://www.google.com/search?q={}',
     'yt': 'https://www.youtube.com/results?search_query={}',
