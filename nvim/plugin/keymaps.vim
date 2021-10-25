@@ -1,6 +1,3 @@
-let g:mapleader = ","
-let g:localmapleader = "\\"
-
 " edit configs
 nnoremap <silent> <Leader>ev :edit $MYVIMRC<CR>
 nnoremap <silent> <Leader>ex :edit $HOME/.xinitrc<CR>
@@ -8,6 +5,8 @@ nnoremap <silent> <Leader>eX :edit $HOME/.Xresources<CR>
 nnoremap <silent> <Leader>ea :edit $HOME/.config/alacritty/alacritty.yml<CR>
 nnoremap <silent> <Leader>es :edit $HOME/.config/sway/config<CR>
 nnoremap <silent> <Leader>ez :edit $HOME/.zshrc<CR>
+
+nnoremap <silent> <Leader>sv :source $MYVIMRC<CR>
 
 " save current file
 inoremap <silent> <C-s> <Esc>:w<CR>a

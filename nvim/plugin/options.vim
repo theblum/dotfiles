@@ -1,9 +1,9 @@
 set autowrite
 set background=dark
-set cmdheight=2
+set cmdheight=1
 set colorcolumn=101
 set complete=.,w,b,u,i,d,t
-set completeopt=menu
+set completeopt=menu,menuone,noselect
 set confirm
 set cscopetag
 set cursorline

@@ -9,10 +9,11 @@
 let g:lightline = {
     \ 'colorscheme': 'Tomorrow_Night',
     \ 'active': {
-    \     'left': [ ['mode', 'paste'], ['cocstatus', 'readonly', 'absolutepath', 'modified'] ]
+    \     'left': [ ['mode', 'paste'], ['gitbranch', 'cocstatus', 'readonly', 'absolutepath', 'modified'] ],
     \ },
     \ 'component_function': {
-    \     'cocstatus': 'coc#status'
+    \     'cocstatus': 'coc#status',
+    \     'gitbranch': 'FugitiveHead'
     \ },
     \ }
 
