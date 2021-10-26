@@ -16,6 +16,7 @@ call dein#add('nvim-lua/popup.nvim')
 call dein#add('nvim-lua/plenary.nvim')
 call dein#add('nvim-telescope/telescope.nvim')
 call dein#add('nvim-telescope/telescope-fzy-native.nvim')
+call dein#add('nvim-treesitter/nvim-treesitter', {'hook_post_update': 'TSUpdate'})
 call dein#add('itchyny/lightline.vim')
 call dein#add('rust-lang/rust.vim')
 call dein#add('ziglang/zig.vim')
@@ -47,6 +48,7 @@ endif
 let g:mapleader = ","
 let g:localmapleader = "\\"
 
+lua require("cfg_treesitter")
 lua require("cfg_telescope")
 lua require("cfg_cmp")
 lua require("cfg_lsp")
