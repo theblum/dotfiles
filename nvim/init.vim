@@ -48,8 +48,4 @@ endif
 let g:mapleader = ","
 let g:localmapleader = "\\"
 
-lua require("cfg_treesitter")
-lua require("cfg_telescope")
-lua require("cfg_cmp")
-lua require("cfg_lsp")
-lua require("cfg_lualine")
+lua require("blum")
