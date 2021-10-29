@@ -35,6 +35,6 @@ c.url.searchengines = {
     **c.url.searchengines
 }
 
-c.fonts.default_family = 'Iosevka Nerd Font'
+c.fonts.default_family = 'Victor Mono Nerd Font'
 c.fonts.default_size = '9pt'
 c.colors.webpage.darkmode.enabled = True
