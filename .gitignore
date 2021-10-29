@@ -2,3 +2,4 @@
 spotifyd/.password
 qutebrowser/autoconfig.yml
 qutebrowser/qsettings
+packer_compiled.lua

@@ -1,7 +1,12 @@
 require("nvim-treesitter.configs").setup({
-    ensure_installed = { "query", "c", "cpp", "rust", "zig" },
+    ensure_installed = "maintained",
     highlight = {
-        enable = false,
+        enable = true,
         disable = {},
     },
+
+    indent = {
+        enable = true,
+        disable = {},
+    }
 })
