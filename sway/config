@@ -120,6 +120,8 @@ bindsym $mod+Up                 exec pulseaudio-ctl up   5
 bindsym $mod+Down               exec pulseaudio-ctl down 5
 bindsym $mod+Shift+KP_Enter     exec pulseaudio-ctl mute
 
+bindsym $mod+Print exec grim -t png -g "$(slurp -d)" ~/pix/screenshot_$(date +%F_%H-%M-%S_%N).png
+
 ## Workspaces ##
 
 set $screen_primary   HDMI-A-1
