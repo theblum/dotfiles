@@ -45,3 +45,8 @@ augroup Brackets
     autocmd!
     autocmd FileType java,rust,c,cpp,zig inoremap <buffer> <C-f> {}<Esc>i<CR><CR><Esc>kS
 augroup END
+
+augroup HighlightYankedText
+    autocmd!
+    autocmd TextYankPost *  silent! lua require("vim.highlight").on_yank()
+augroup END

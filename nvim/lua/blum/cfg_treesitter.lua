@@ -1,5 +1,5 @@
 require("nvim-treesitter.configs").setup({
-    ensure_installed = { "c", "cpp", "rust", "zig" },
+    ensure_installed = { "query", "c", "cpp", "rust", "zig" },
     highlight = {
         enable = false,
         disable = {},

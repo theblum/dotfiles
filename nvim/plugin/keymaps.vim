@@ -1,4 +1,4 @@
-" edit configs
+" edit confIgs
 nnoremap <silent> <Leader>ev :edit $MYVIMRC<CR>
 nnoremap <silent> <Leader>ex :edit $HOME/.xinitrc<CR>
 nnoremap <silent> <Leader>eX :edit $HOME/.Xresources<CR>
@@ -6,7 +6,7 @@ nnoremap <silent> <Leader>ea :edit $HOME/.config/alacritty/alacritty.yml<CR>
 nnoremap <silent> <Leader>es :edit $HOME/.config/sway/config<CR>
 nnoremap <silent> <Leader>ez :edit $HOME/.zshrc<CR>
 
-nnoremap <silent> <Leader>sv :source $MYVIMRC<CR>
+nnoremap <silent> <Leader>ss :source %<CR>
 
 " save current file
 inoremap <silent> <C-s> <Esc>:w<CR>a
@@ -35,6 +35,14 @@ nnoremap j gj
 nnoremap k gk
 vnoremap j gj
 vnoremap k gk
+
+" add large movements to jumplist
+nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . "j"
+nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . "k"
+
+" move selections up/down
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 " switch to previous buffer
 nnoremap <Leader><Leader> <C-^>
@@ -65,3 +73,12 @@ vnoremap < <gv
 nnoremap <Leader>u gUiwea
 nnoremap <Leader>U guiew
 imap <C-l> <Esc><Leader>u
+
+" keep cursor centered on screen and open folds
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+
+" add undo break points after select symbols
+inoremap , ,<C-g>u
+inoremap . .<C-g>u
