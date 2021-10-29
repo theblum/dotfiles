@@ -12,11 +12,4 @@ M.project_files = function()
     if not ok then builtin.find_files(opts) end
 end
 
-M.list_dotfiles = function()
-    builtin.git_files({
-        prompt_title = "Dot Files",
-        cwd = vim.env.DOTFILES,
-    })
-end
-
 return M
