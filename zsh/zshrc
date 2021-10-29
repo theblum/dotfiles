@@ -3,6 +3,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 KEYTIMEOUT=10
 
+export DOTFILES="$HOME/dtf"
 export BROWSER='vieb'
 export EDITOR='nvim'
 export VISUAL='nvim'
