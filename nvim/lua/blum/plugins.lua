@@ -13,7 +13,7 @@ vim.cmd([[
 
 return require("packer").startup(function(use)
     use "wbthomason/packer.nvim"
-    use "chriskempson/base16-vim"
+    use "marko-cerovac/material.nvim"
     use "neovim/nvim-lspconfig"
     use "hrsh7th/cmp-nvim-lsp"
     use "hrsh7th/cmp-path"
