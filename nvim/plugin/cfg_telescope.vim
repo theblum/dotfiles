@@ -7,3 +7,4 @@ nnoremap <silent> <Leader>fg :Telescope live_grep<CR>
 nnoremap <silent> <Leader>fb :Telescope buffers<CR>
 nnoremap <silent> <Leader>fr :Telescope file_browser hidden=true<CR>
 nnoremap <silent> <Leader>fh :Telescope help_tags<CR>
+nnoremap <silent> <Leader>fm :Telescope man_pages<CR>

@@ -11,6 +11,8 @@ if vim.fn.filereadable(vimrc_background) then
     vim.cmd("source " .. vimrc_background)
 end
 
+vim.cmd("hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg")
+
 -- require("material").setup({
 --     contrast = false,
 --     borders = true,

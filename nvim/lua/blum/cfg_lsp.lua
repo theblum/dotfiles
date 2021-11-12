@@ -1,6 +1,20 @@
 local lspconfig = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+    vim.lsp.diagnostic.on_publish_diagnostics, {
+        virtual_text = false,
+        signs = true,
+    }
+)
+vim.cmd([[
+    " show diagnostics on hover
+    augroup LSPConfig
+        autocmd!
+        autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics()
+    augroup END
+]])
+
 lspconfig.clangd.setup{ capabilities = capabilities }
 lspconfig.rust_analyzer.setup{ capabilities = capabilities, cmd = { "rustup", "run", "nightly", "rust-analyzer" } }
 lspconfig.zls.setup{ capabilities = capabilities }
