@@ -1,5 +1,5 @@
 typeset -U path
-path=("$HOME/bin" "$HOME/.emacs.d/bin" "$HOME/.local/share/cargo/bin" $path[@])
+path=("$HOME/bin" "$HOME/.local/share/cargo/bin" $path[@])
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"

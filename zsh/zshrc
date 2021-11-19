@@ -4,7 +4,7 @@ SAVEHIST=10000
 KEYTIMEOUT=10
 
 export DOTFILES="$HOME/dtf"
-export BROWSER='vieb'
+export BROWSER='qutebrowser'
 export EDITOR='nvim'
 export VISUAL='nvim'
 export SUDO_ASKPASS='/usr/lib/ssh/ssh-askpass'
