@@ -28,19 +28,19 @@ exec swayidle -w \
 
 include /home/blum/vcs/base16-sway/themes/base16-nord.config
 #                       Border  BG      Text    Ind     Child Border
-client.focused          $base05 $base0D $base00 $base0D $base0D
-client.focused_inactive $base01 $base01 $base05 $base03 $base01
-client.unfocused        $base01 $base00 $base05 $base01 $base01
-client.urgent           $base08 $base08 $base00 $base08 $base08
+client.focused          $base09 $base09 $base05 $base09 $base09
+client.focused_inactive $base02 $base02 $base05 $base02 $base02
+client.unfocused        $base02 $base02 $base05 $base02 $base02
+client.urgent           $base0D $base0D $base05 $base0D $base0D
 client.placeholder      $base00 $base00 $base05 $base00 $base00
-client.background       $base07
+client.background       $base00
 
 font pango:VictorMono Nerd Font 9
 
 output * bg /home/blum/pix/evil-castle-dark-fantasy.jpg fill
 input type:keyboard xkb_options "ctrl:nocaps"
 
-gaps inner 25
+gaps inner 28
 gaps horizontal 50
 
 default_border pixel 1
