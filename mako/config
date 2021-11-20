@@ -3,21 +3,21 @@ border-radius=5
 border-size=1
 default-timeout=5000
 
-## Base16 Material
-# Author: Nate Peterson
+## Base16 Nord
+# Author: arcticicestudio
 #
 # You can use these variables anywhere in the mako configuration file.
 
-background-color=#263238
-text-color=#EEFFFF
-border-color=#82AAFF
+background-color=#2E3440
+text-color=#E5E9F0
+border-color=#EBCB8B
 
 [urgency=low]
-background-color=#263238
-text-color=#FFCB6B
-border-color=#82AAFF
+background-color=#2E3440
+text-color=#5E81AC
+border-color=#EBCB8B
 
 [urgency=high]
-background-color=#263238
-text-color=#F07178
-border-color=#82AAFF
+background-color=#2E3440
+text-color=#88C0D0
+border-color=#EBCB8B
