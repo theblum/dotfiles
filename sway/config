@@ -26,7 +26,7 @@ exec swayidle -w \
 
 ## Theme ##
 
-include /home/blum/vcs/base16-sway/themes/base16-material.config
+include /home/blum/vcs/base16-sway/themes/base16-nord.config
 #                       Border  BG      Text    Ind     Child Border
 client.focused          $base05 $base0D $base00 $base0D $base0D
 client.focused_inactive $base01 $base01 $base05 $base03 $base01
@@ -37,7 +37,7 @@ client.background       $base07
 
 font pango:VictorMono Nerd Font 9
 
-output * bg /home/blum/pix/blue-forest.jpg fill
+output * bg /home/blum/pix/evil-castle-dark-fantasy.jpg fill
 input type:keyboard xkb_options "ctrl:nocaps"
 
 gaps inner 25
@@ -57,9 +57,9 @@ set $down j
 set $up k
 set $right l
 
-set $term foot
+set $term alacritty
 
-bindsym $mod+Return exec $term tmux
+bindsym $mod+Return exec $term -e tmux
 bindsym $mod+Shift+Return exec $term
 bindsym $mod+p exec wofi --show 'run,drun' --prompt run
 bindsym $mod+r exec $term --app-id ranger zsh -i -c "tmux new-session -A -s ranger ranger"

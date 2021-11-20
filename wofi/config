@@ -1,7 +1,7 @@
 width=15%
 height=50%
 xoffset=5
-term=foot
+term=alacritty
 hide_scroll=true
 location=top_left
 gtk_dark=true
