@@ -44,6 +44,7 @@ vim.opt.smartindent = true
 vim.opt.softtabstop = 4
 vim.opt.splitbelow = true
 vim.opt.splitright = true
+vim.opt.termguicolors = true
 vim.opt.textwidth = 0
 vim.opt.undofile = true
 vim.opt.updatetime = 300

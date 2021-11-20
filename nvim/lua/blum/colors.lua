@@ -1,35 +1,14 @@
 require("lualine").setup({
     options = {
-        -- theme = "material-nvim",
-        theme = "material",
+        theme = "nord",
     }
 })
 
-local vimrc_background = vim.fn.expand("$HOME/.vimrc_background")
-if vim.fn.filereadable(vimrc_background) then
-    vim.g.base16colorspace = 256
-    vim.cmd("source " .. vimrc_background)
-end
+-- local vimrc_background = vim.fn.expand("$HOME/.vimrc_background")
+-- if vim.fn.filereadable(vimrc_background) then
+--     vim.g.base16colorspace = 256
+--     vim.cmd("source " .. vimrc_background)
+-- end
 
-vim.cmd("hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg")
-
--- require("material").setup({
---     contrast = false,
---     borders = true,
---     popup_menu = "dark",
---
---     italics = {
---         comments = true,
---     },
---
---     contrast_windows = {
---         "qf"
---     },
---
---     disable = {
---         eob_lines = true,
---     }
--- })
---
--- vim.g.material_style = "oceanic"
--- vim.cmd('colorscheme material')
+vim.cmd('colorscheme nord')
+vim.cmd("hi! EndOfBuffer guibg=bg guifg=bg")
