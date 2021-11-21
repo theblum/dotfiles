@@ -40,8 +40,8 @@ font pango:VictorMono Nerd Font 9
 output * bg /home/blum/pix/evil-castle-dark-fantasy.jpg fill
 input type:keyboard xkb_options "ctrl:nocaps"
 
-gaps inner 28
-gaps horizontal 50
+gaps inner 35
+gaps horizontal 45
 
 default_border pixel 1
 default_floating_border pixel 1
