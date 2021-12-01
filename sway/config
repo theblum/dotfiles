@@ -40,6 +40,9 @@ font pango:VictorMono Nerd Font 9
 output * bg /home/blum/pix/evil-castle-dark-fantasy.jpg fill
 input type:keyboard xkb_options "ctrl:nocaps"
 
+output DP-1 pos 0 0 mode 1920x1080@60Hz
+output HDMI-A-1 pos 1920 0 mode 1920x1080@60Hz
+
 gaps inner 35
 gaps horizontal 45
 
