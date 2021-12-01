@@ -10,5 +10,6 @@ require("lualine").setup({
 --     vim.cmd("source " .. vimrc_background)
 -- end
 
+vim.g.nord_italic = true
 vim.cmd('colorscheme nord')
 vim.cmd("hi! EndOfBuffer guibg=bg guifg=bg")
