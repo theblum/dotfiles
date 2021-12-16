@@ -11,7 +11,7 @@ vim.cmd([[
     " show diagnostics on hover
     augroup LSPConfig
         autocmd!
-        autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics()
+        autocmd CursorHold * lua vim.diagnostic.open_float()
     augroup END
 ]])
 
