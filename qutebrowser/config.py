@@ -1,7 +1,5 @@
 import subprocess
 
-config.load_autoconfig()
-
 c.aliases = { 'x': 'quit --save', **c.aliases }
 c.auto_save.session = True
 c.content.webrtc_ip_handling_policy = 'default-public-interface-only'
@@ -38,3 +36,5 @@ c.url.searchengines = {
 c.fonts.default_family = 'VictorMono Nerd Font'
 c.fonts.default_size = '9pt'
 c.colors.webpage.darkmode.enabled = True
+
+config.load_autoconfig()
