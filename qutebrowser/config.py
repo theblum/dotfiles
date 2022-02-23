@@ -35,6 +35,6 @@ c.url.searchengines = {
 
 c.fonts.default_family = 'VictorMono Nerd Font'
 c.fonts.default_size = '9pt'
-c.colors.webpage.darkmode.enabled = True
+c.colors.webpage.preferred_color_scheme = 'dark'
 
 config.load_autoconfig()
