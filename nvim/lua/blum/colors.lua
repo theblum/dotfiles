@@ -3,7 +3,7 @@ require("lualine").setup({
         theme = "nord",
     },
     sections = {
-        lualine_c = {"vim.fn.expand('%')"}
+        lualine_c = {{ "filename", path = 1 }}
     }
 })
 
