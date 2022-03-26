@@ -1,22 +1,24 @@
 local lspconfig = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-    vim.lsp.diagnostic.on_publish_diagnostics, {
-        virtual_text = false,
-        signs = true,
-    }
-)
-vim.cmd([[
-    " show diagnostics on hover
-    augroup LSPConfig
-        autocmd!
-        autocmd CursorHold * lua vim.diagnostic.open_float()
-    augroup END
-]])
+-- vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+--     vim.lsp.diagnostic.on_publish_diagnostics, {
+--         virtual_text = false,
+--         signs = true,
+--     }
+-- )
+
+-- vim.cmd([[
+--     " show diagnostics on hover
+--     augroup LSPConfig
+--         autocmd!
+--         autocmd CursorHold * lua vim.diagnostic.open_float()
+--     augroup END
+-- ]])
 
 lspconfig.clangd.setup{ capabilities = capabilities }
-lspconfig.rust_analyzer.setup{ capabilities = capabilities, cmd = { "rustup", "run", "nightly", "rust-analyzer" } }
+-- handled by rust-tools in cfg_rust.lua
+-- lspconfig.rust_analyzer.setup{ capabilities = capabilities, cmd = { "rustup", "run", "nightly", "rust-analyzer" } }
 lspconfig.zls.setup{ capabilities = capabilities }
 lspconfig.vimls.setup{ capabilities = capabilities }
 
@@ -41,6 +43,6 @@ lspconfig.sumneko_lua.setup{
             workspace = {
                 library = vim.api.nvim_get_runtime_file("", true),
             },
-        }
+        },
     },
 }

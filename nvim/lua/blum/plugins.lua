@@ -26,11 +26,13 @@ return require("packer").startup(function(use)
     use "hrsh7th/vim-vsnip"
     use { "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } }
     use "nvim-telescope/telescope-fzy-native.nvim"
+    use "nvim-telescope/telescope-file-browser.nvim"
     use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
     use "nvim-treesitter/playground"
-    use { "ThePrimeagen/harpoon", requires = { 'nvim-lua/plenary.nvim', 'nvim-lua/popup.nvim' } }
-    use "nvim-lualine/lualine.nvim"
-    use "kyazdani42/nvim-web-devicons"
+    use { "ThePrimeagen/harpoon", requires = { "nvim-lua/plenary.nvim", "nvim-lua/popup.nvim" } }
+    use { "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } }
+    use { "simrat39/rust-tools.nvim", requires = { "nvim-lua/plenary.nvim", 'mfussenegger/nvim-dap' } }
+    use { "saecki/crates.nvim", requires = { "nvim-lua/plenary.nvim" } }
     use "rust-lang/rust.vim"
     use "ziglang/zig.vim"
     use "tomtom/tcomment_vim"

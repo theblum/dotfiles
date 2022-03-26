@@ -3,6 +3,7 @@ local builtin = require("telescope.builtin")
 
 telescope.setup()
 telescope.load_extension("fzy_native")
+telescope.load_extension("file_browser")
 
 local M = {}
 

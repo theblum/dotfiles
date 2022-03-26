@@ -21,5 +21,6 @@ cmp.setup({
         { name = 'nvim_lua' },
         { name = 'buffer' },
         { name = 'path' },
+        { name = 'crates' },
     }
 })
