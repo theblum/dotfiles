@@ -33,6 +33,7 @@ return require("packer").startup(function(use)
     use { "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } }
     use { "simrat39/rust-tools.nvim", requires = { "nvim-lua/plenary.nvim", 'mfussenegger/nvim-dap' } }
     use { "saecki/crates.nvim", requires = { "nvim-lua/plenary.nvim" } }
+    use "ron-rs/ron.vim"
     use "rust-lang/rust.vim"
     use "ziglang/zig.vim"
     use "tomtom/tcomment_vim"

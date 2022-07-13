@@ -81,6 +81,9 @@ alias la='exa -a'
 alias ll='exa -lg'
 alias lla='exa -lag'
 
+alias cat='bat'
+alias c='cat'
+
 alias q='exit'
 
 alias sl='ls'

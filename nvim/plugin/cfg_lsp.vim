@@ -1,6 +1,7 @@
 nnoremap <silent> <Leader>gd :lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> <Leader>gt :lua vim.lsp.buf.type_definition()<CR>
 nnoremap <silent> <Leader>gr :lua vim.lsp.buf.references()<CR>
+nnoremap <silent> <Leader>gr :lua vim.lsp.buf.code_action()<CR>
 nnoremap <silent> <Leader>gh :lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> <Leader>gs :lua vim.lsp.buf.signature_help()<CR>
 nnoremap <silent> <Leader>rn :lua vim.lsp.buf.rename()<CR>
